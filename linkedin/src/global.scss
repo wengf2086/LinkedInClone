@@ -26,6 +26,7 @@
 @import "@ionic/angular/css/flex-utils.css";
 
 
+// Popup overlay menu can't be accessed directly, so we need to apply specific global styling to select it
 .my-custom-class .popover-content {
     width: 300px;
     margin-top: 16px;
