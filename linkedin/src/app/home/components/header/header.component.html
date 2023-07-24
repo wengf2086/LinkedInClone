@@ -6,9 +6,60 @@
         <ion-icon 
           color="primary"
           class="linkedin-logo"
-          name="logo-linkedin"></ion-icon>
+          name="logo-linkedin">
+        </ion-icon>
       </ion-button>
+      <ion-searchbar color="tertiary" class="ion-hide-lg-down" placeholder="Search"> <!-- hide searchbar screen too small too fit -->
+      </ion-searchbar>
     </ion-buttons>
+
+    <!-- grid to position text icons vertically (we want to use a layout template with rows and cols, so we must use grid) -->
+    <ion-grid> <!-- 12 cols in a row by default-->
+      <ion-row class="ion-justify-content-end"> 
+        <!-- By default, columns take up the entire row. However we only want them to take up the space of the icon -->
+        <ion-col size="auto">
+          <ion-icon name="home"></ion-icon>
+          <div>Home</div>
+        </ion-col>
+        <ion-col size="auto">
+          <ion-icon name="people"></ion-icon>
+          <div>My Network</div>
+        </ion-col>
+        <ion-col size="auto">
+          <ion-icon name="briefcase"></ion-icon>
+          <div>Jobs</div>
+        </ion-col>
+        <ion-col size="auto">
+          <ion-icon name="chatbox-ellipses"></ion-icon>
+          <div>Messaging</div>
+        </ion-col>
+        <ion-col size="auto">
+          <ion-icon name="notifications"></ion-icon>
+          <ion-badge
+          color="danger"
+          style="
+            position: absolute;
+            margin-left: -10px;
+            margin-top: -5px;
+            height: 16px;
+            width: 16px;
+            border-radius: 9999px
+            "
+          >
+            2
+          </ion-badge>
+          <div>Notifications</div>
+        </ion-col>
+        <ion-col (click)="presentPopover($event)" size="auto">
+          <ion-avatar>
+            <ion-img src="../../../../assets/default.png"></ion-img>
+          </ion-avatar>
+          <div style="display: flex; justify-content: center; align-items: center">Me
+            <ion-icon style="font-size: 16px" name="caret-down-outline"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
   </div>
 </ion-toolbar>
 </ion-header>
