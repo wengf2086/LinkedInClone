@@ -27,8 +27,8 @@
 
 
 // Popup overlay menu can't be accessed directly, so we need to apply specific global styling to select it
-.my-custom-class .popover-content {
-    width: 300px;
-    margin-top: 16px;
+.my-custom-class {
+    --width: 300px;
     --box-shadow: none;
+    --background: none;
 }
