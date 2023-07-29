@@ -1,0 +1,11 @@
+// Brings content to the top of the page
+:host {
+    justify-content: start;
+}
+
+.content-container {
+    display: flex; // display horizontally
+    width: 1128px; // same as header container
+    margin: 40px auto 0; // top, L/R, bottom
+}
+
